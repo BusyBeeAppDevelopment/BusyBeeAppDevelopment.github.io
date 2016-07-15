@@ -128,11 +128,11 @@
   text-decoration: none;
 }
 /*  SPA Home Button */
-.homeButton{
+.homeButton1{
     position: absolute;
     margin-top: 0%;
-    margin-left: 6.5%;
-    width: 15%;
+    margin-left: 5%;
+    width: 10%;
 }
 .homeButton img{
     position: relative;
@@ -143,13 +143,13 @@
 
 
 /*  Why SNT page css*/
-#whyPage{
+#whyPage, #FAQPage{
     position: absolute;
     top:0px;
     width: 100%;
     height: 100%;
     display: none;
-    background-image: url(/img/Snake-Skin-Background.jpg);
+    background-image: url("/img/Snake-Skin-Background.jpg");
     background-size: cover;
     
 }
@@ -159,7 +159,7 @@
    width: 25%;
    padding: 15px;
    margin-left: 2.5%;    
-   margin-top: 7.55%;    
+   margin-top: 10%;    
    font-family: "robotobold", Arial;
    background-color: beige;
    box-shadow: 5px 5px rgba(0,0,0,.7);

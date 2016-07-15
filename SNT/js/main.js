@@ -21,10 +21,23 @@ $(document).ready(function(){
         $("#whyPage").show();
         
     });
-    $(".homeButton").click(function(){
+    $(".homeButton1").click(function(){
+        
+        $("#whyPage").hide();
+        $("#home").show();
+    });
+    $("#FAQButton").click(function(){
+        $("#home").hide();
+        $("#FAQPage").show();
+        
+    });
+    $(".homeButton2").click(function(){
         
         $("#whyPage").hide();
         $("#home").show();
     });
     
 });
+$( function() {
+    $( "#FAQs" ).accordion();
+  } );
