@@ -1,0 +1,194 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*  Fonts   */
+
+@font-face {
+    font-family: robotobold;
+    src: url("fonts/RobotoSlab-Bold.ttf");
+}
+
+/* Home Page CSS */
+.fullScreen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    clear: left;
+    background: black;
+    overflow: hidden;  
+}
+
+.headText{
+    position: absolute;
+    z-index: 2;
+    width: 100%; 
+    top:2%;
+    margin-left: -1%;    
+    text-align: center;
+}
+.headText img{
+    width:60%;
+}
+
+.mainLogo{
+    position: absolute;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 20%;
+    z-index: 3;
+    text-align: center;
+}
+.mainLogo img{
+    position: relative;
+    width: 70%;
+}
+.milkHeader{
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -10%;
+    width: 100%;
+    z-index:1;
+    text-align: center;
+}
+.milkHeader img{
+    position: relative; 
+    width:80%;
+}
+    
+/*  Home Page Navigation  */
+.leftIcons{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    
+    
+}
+.leftIcons ul li{
+    text-align: center;
+    margin-top: 4%;
+}
+
+.rightIcons{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    margin-left: 72%;   
+}
+
+.rightIcons ul li{
+    text-align: center;
+    margin-top: 4%;    
+}
+.slideshowLink{
+    position: absolute;
+    z-index: 10;
+    top:82%;
+    width: 33%;
+    margin-left: 31%;
+    text-align: center;
+    
+}
+.leftIcons ul,
+.rightIcons ul, 
+.slideshowLink ul{
+    list-style-type: none;  
+    
+}
+
+
+/* Button Styles */
+
+.btn {
+  background: #d93434;
+  background-image: -webkit-linear-gradient(top, #d93434, #611919);
+  background-image: -moz-linear-gradient(top, #d93434, #611919);
+  background-image: -ms-linear-gradient(top, #d93434, #611919);
+  background-image: -o-linear-gradient(top, #d93434, #611919);
+  background-image: linear-gradient(to bottom, #d93434, #611919);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #fc3c3c;
+  background-image: -webkit-linear-gradient(top, #fc3c3c, #bd2d2d);
+  background-image: -moz-linear-gradient(top, #fc3c3c, #bd2d2d);
+  background-image: -ms-linear-gradient(top, #fc3c3c, #bd2d2d);
+  background-image: -o-linear-gradient(top, #fc3c3c, #bd2d2d);
+  background-image: linear-gradient(to bottom, #fc3c3c, #bd2d2d);
+  text-decoration: none;
+}
+/*  SPA Home Button */
+.homeButton{
+    position: absolute;
+    margin-top: 0%;
+    margin-left: 6.5%;
+    width: 15%;
+}
+.homeButton img{
+    position: relative;
+    width: 100%;  
+    z-index: 99;
+}
+
+
+
+/*  Why SNT page css*/
+#whyPage{
+    position: absolute;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-image: url(/img/Snake-Skin-Background.jpg);
+    background-size: cover;
+    
+}
+
+.disclaimer{
+   position: absolute;
+   width: 25%;
+   padding: 15px;
+   margin-left: 2.5%;    
+   margin-top: 7.55%;    
+   font-family: "robotobold", Arial;
+   background-color: beige;
+   box-shadow: 5px 5px rgba(0,0,0,.7);
+   border-radius: 5px;    
+    
+}
+#offeringDoc{
+    position: absolute;
+    width: 70%;
+    margin-left: 30%;
+    margin-top: 2%;
+    height:98%
+    
+}
+/*  Footer Settings */
+
+footer {
+    position: absolute;
+    width: 33%;
+    margin-left: 32.5%;
+    top:95%;
+    text-align: center;
+    color:yellow;
+    text-shadow: 1px 1px rgba(205, 227, 163, 0.6);
+    
+}
+
+
+
+
+
+
