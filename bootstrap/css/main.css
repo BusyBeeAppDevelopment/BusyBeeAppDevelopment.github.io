@@ -26,16 +26,24 @@
 }
 
 
+
+
 footer{
    text-align:center;
    
 }
 
+
 footer img{
    max-width:100px;
    
 }
-
+#footerNav{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    
+}
 
 
 
