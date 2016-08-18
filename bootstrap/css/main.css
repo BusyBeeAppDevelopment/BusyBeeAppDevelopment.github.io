@@ -38,13 +38,7 @@ footer img{
    max-width:100px;
    
 }
-#footerNav{
-    
-    z-index: 99;
-    width: 100%;
-    position: fixed;
-    
-}
+
 .navTab{
     border: 1px solid black;
     border-radius: 5px 5px 0px 0px;
