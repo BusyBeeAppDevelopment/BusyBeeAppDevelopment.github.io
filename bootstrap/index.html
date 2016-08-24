@@ -10,7 +10,7 @@
         <meta name="description" content="Busy Bee Information Technologies - Web Development, Prototyping for IoT, and Emergency PC and Mac Repiar in Denver, Colorado">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+        <link href="https://fonts.googleapis.com/css?family=Rhodium+Libre|Roboto+Slab" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
@@ -29,9 +29,9 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header glossy">
+    <nav class="navbar navbar-inverse navbar-fixed-top black" role="navigation">
+      <div class="container-fluid glossy">
+        <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -39,7 +39,8 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-left" href="#"><img src="img/sheildlogo.png" style="width:50px;"></a>        
-          <a class="navbar-brand" href="#">Busy Bee Information Technologies</a>
+          <a class="navbar-brand hidden-xs" href="#">Busy Bee Information Technologies</a>
+          <a class="navbar-brand visible-xs" href="#">Busy Bee I.T.</a>    
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             
@@ -61,13 +62,18 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron codeBack">
-      <div class="container mainHead">
+      <div class="container-fluid mainHead">
         <h1>Commission us for your code!</h1>
         <p>These days programming, or coding, provides consumers and businesses
         alike the oportunity to acheive some extraordinary things.  
         We can help you automate parts of your home, business or random task by leveraging the multiple 
         programming languages to custom fit your project.</p>
-        <p><a class="btn btn-primary btn-lg" href="tel:+13038983126" role="button">Learn more &raquo;</a></p>
+        <p>
+            <a href="tel:+13038983126" class="btn btn-primary btn-lg">   
+                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>Call Now! 
+            </a>    
+        </p>
+                    
       </div>
     </div>
 
