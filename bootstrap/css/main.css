@@ -8,6 +8,8 @@ body *{
     font-family: 'Rhodium Libre', serif !important;
     
 }
+
+
 .rainbow {
     background: red; /* not working, let's see some red */
     background: -moz-linear-gradient( top ,
@@ -59,9 +61,12 @@ footer img{
     
 }
 .mainHead{
+    position: relative;
     background-color: rgba(255,255,255,0.9);
     
     border-radius: 10px;
+    width: 90% !important;
+    
 }
 .black{
     background-color:black;
