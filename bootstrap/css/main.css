@@ -62,11 +62,7 @@ footer img{
 }
 
 .glossy {
-  width: 100px;
-  height: 25px;
- 
-  margin: 10px auto;
-  position: relative;
+
  
   background: #94c4fe;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(31%,#94c4fe), color-stop(100%,#d3f6fe));
@@ -77,11 +73,7 @@ footer img{
   background: linear-gradient(to bottom,  #94c4fe 31%,#d3f6fe 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94c4fe', endColorstr='#d3f6fe',GradientType=0 );
  
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
  
-  border: 1px solid #4864a9;
  
   color: #000;
   font-size: 0.750em;
