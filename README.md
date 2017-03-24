@@ -5,6 +5,8 @@ Do you like our page?   Would you like to see how it is made?
 
 Bootstrap - is our current single page html for BusyBeeDenver.com
 
+SchuylerAnkele - is my resume in web language format.  
+
 SNT - is a single page apllication using JQuery.   It is intended to be deployed on a simple XAMP/LAMP/MAMP Stack and run as local host.  
 You could then connect an inexpensive touch screen to create an E-kiosk.  Email me if you have question on securing this.  schuyler.ankele@gmail.com
 
