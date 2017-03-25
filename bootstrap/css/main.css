@@ -49,10 +49,13 @@ footer img{
     border-radius: 5px 5px 0px 0px;
     padding: 20px;
     width: 20%;
+    margin-left: 2.5%;
     margin-right: 2.5%;
-    
+    font-size: 1.2rem;
+    background-color: aliceblue;
     
 }
+
 
 .codeBack {
     background-image: url("/bootstrap/img/code.jpg");
@@ -99,6 +102,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacf32', end
 .navbar-brand{
     color: black!important;
     font-family:  'Roboto Slab', serif !important;
+    
+}
+
+#footNav{
+    text-align: center;
+    padding-top: 10px;
+    display: flex;
+    background-color: black;
+    
     
 }
 
