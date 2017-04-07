@@ -9,6 +9,9 @@ body *{
     
 }
 
+#co-tagline {
+	margin-top: 50px;
+}
 
 .rainbow {
     background: red; /* not working, let's see some red */
