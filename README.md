@@ -3,7 +3,7 @@ Source for Busy Bee Information Technologies and App Development web site.
 
 Do you like our page?   Would you like to see how it is made?
 
-Bootstrap - is our current single page html for BusyBeeDenver.com
+<a href="http://busybeedenver.com">Bootstrap - is our current single page html for BusyBeeDenver.com</a>
 
 SchuylerAnkele - is my resume in web language format.  
 
