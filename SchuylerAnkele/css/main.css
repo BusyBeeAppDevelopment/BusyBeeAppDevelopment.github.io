@@ -6,6 +6,20 @@
 
 
 
+#languages{
+    background-color: black;
+    color: aliceblue;
+    padding-top: 20px;
+}
+
+.jumbotron{
+    margin-bottom:0px !important;
+    
+}
+#home{
+    padding-top: 20px;
+    background-color: black;
+}
 
 
 

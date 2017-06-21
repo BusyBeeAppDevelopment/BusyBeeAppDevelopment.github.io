@@ -9,73 +9,149 @@
         <title>Schuyler Ankele - Application Developer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="/ico/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/ico/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/ico/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/ico/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/ico/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/ico/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/ico/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/ico/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/ico/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/ico/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <!-- Bootstrap 4 Bundle -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        
+  <!-- Navbar content -->
+        
+    <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          
+          <a class="navbar-brand" href="#">Schuyler Ankele - Full-Stack Application Developer</a>
+          <button type="button" class="navbar-toggle collapsed navbar-toggler-right btn btn-outline-info" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <i class="fa fa-bars"></i>  
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Schuyler Ankele - Application Developer</a>
+          </button> 
+             
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
           
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Languages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Frameworks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Resume and C.V.</a>
+              </li>
+          </ul>
+            <span class="navbar-text"><a href="mailto:schuyler.ankele@gmail.com">schuyler.ankele@gmail.com</a></span>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>High quality code engineered with love!</h1>
-        <p>Some software developers view writing code as their job.  I live for this stuff.  I strive to learn all things programming from C to Angular.  One of my joys in life is discovering all the things I don't know.  Learning new programming methodologies and frameworks is my love.  Let me work for you to watch my joy of programming become yours.</p>
-        <p><a class="btn btn-primary btn-lg" href="tel:+13038983126" role="button">Give me a Call</a></p>
+      <div class="container-fluid" id="home">
+        <div class="jumbotron">
+            <h1>High quality code engineered with love!</h1>
+            <p>Some software developers view writing code as their job.  I live for this stuff.  I strive to learn all things programming from C to Angular.  One of my joys in life is discovering all the things I don't know.  Learning new programming methodologies and frameworks is my love.  Let me work for you to see my joy of programming in action.</p>
+            <p>
+            <div class="text-center">
+                <div class="btn-group">
+                <a class="btn btn-primary btn-md" href="tel:+13038983126" role="button">Give me a Call <i class="fa fa-phone"></i></a>
+                <a class="btn btn-info btn-md" href="https://github.com/shoesCodeFor" role="button">Linked<i class="fa fa-linkedin"></i></a>  
+                <a class="btn btn-secondary btn-md" href="https://github.com/shoesCodeFor" role="button">Github <i class="fa fa-github"></i></a>    
+            </div>
+            
+            </div>    
+            
+            </p>
+          
+        </div>  
+        
       </div>
-    </div>
+   
 
-    <div class="container">
+    <div class="container-fluid" id="languages">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12 text-center">
           <h1>Languages:</h1>
           
+        </div> 
+        <div class="col-md-4 text-center">
+          <h2>Java</h2>
+          <p class="text-left">
+          <ul>
+            <li>Object Oriented Programming</li>
+            <li>Android Development</li>
+            <li>Java Console Apps and Backend API</li>  
+          </ul>
+          </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>  
         <div class="col-md-4 text-center">
-          <h2>HTML5 + CSS3</h2>
-          <p class="text-left">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4 text-center">
-          <h2>ES6 (JavaScript) + jQuery</h2>
-          <p class="text-left">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <h2>ES6 &amp; JavaScript</h2>
+          <p class="text-left">
+            <ul>
+                <li>Object Oriented and Functional JavaScript</li>
+                <li>jQuery 2/3.x</li>
+                <li>Angular 4 and Node</li>
+            </ul>  
+          </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4 text-center">
           <h2>PHP</h2>
-          <p class="text-left">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p class="text-left">
+          <div class="container text-left">
+            <ul>
+            <li>Traditional Full Stack Web Apps</li>  
+            <li>REST API Design and Use</li> 
+            <li>WordPress and WooCommerce API</li>    
+          </ul>
+          </div>      
+          
+          </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
-      </div>
+      </div><!-- End of Row -->
+    </div>
+    <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">  
         <h1>Development Disciplines</h1>  
