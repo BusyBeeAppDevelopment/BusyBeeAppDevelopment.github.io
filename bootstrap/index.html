@@ -6,22 +6,24 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Busy Bee Information Technologies - Denver Web Development</title>
         <meta name="description" content="Busy Bee Information Technologies - Web Development, Prototyping for IoT, and Emergency PC and Mac Repiar in Denver, Colorado">
+        <meta name="google-site-verification" content="x7mQA58oe48Ro5U9lZREJ_BH_tjPT1bHhcLNRWacM8Q" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link href="https://fonts.googleapis.com/css?family=Rhodium+Libre|Roboto+Slab" rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
+        
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.css">
         <link rel="stylesheet" href="css/main.css">
-
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 90px;
+            }
+        </style>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="/js/busyBee.js"></script>
     </head>
@@ -55,6 +57,24 @@
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
           </form> -->
+            <ul class="nav nav-stacked hidden-sm hidden-md hidden-lg">
+                <li>
+                    <a href="#" class="">Web-App Development</a>
+                </li>
+                <li>
+                    <a href="#" class="">Web-Design Development</a>
+                </li>
+                <li>
+                    <a href="#">Embedded Device Development</a> 
+                </li>
+                <li>
+                    <a href="#">Emergency PC / Mac Repair</a>
+                </li>
+            </ul>
+             
+             
+            
+             
             
         </div><!--/.navbar-collapse -->
       </div>
@@ -70,14 +90,14 @@
         programming languages to custom fit your project.</p>
         <p>
             <a href="tel:+13038983126" class="btn btn-primary btn-lg">   
-                <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>Call Now! 
+                Call Now! <i class="fa fa-phone" aria-hidden="true"></i>
             </a>    
         </p>
                     
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid" id="quickCards">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4 text-center">
@@ -89,36 +109,55 @@
           <h2>Embedded Projects.</h2>
           <p>We love IoT and you probably do too if you found us on <a href="http://www.github.com/">Github</a>.  Why don't we write some
           beautiful code together?</p>
+          <p>Arduino √  | NodeMCU √  | Raspberry π √</p>    
           <p><a class="btn btn-default" href="mailto:schuyler.ankele@gmail.com" role="button">Email Schuyler</a></p>
        </div>
         <div class="col-md-4 text-center">
-          <h2>Tutorials.....</h2>
-          <h3>I'm not teaching.  These are ones I've taken.</h3>
-          <p>Practice makes perfect.  That's what you'll find in here.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Open-Source</h2>
+          <h3>Check out our Github.</h3>
+          <p>This is a little empty for now but feel free to fork our repo or view the source code for this page.</p>
+            <p>Currently under construction - Quickbooks CSV to WooCommerce PHP uploader</p>  
+          <p><a class="btn btn-default" href="https://github.com/BusyBeeAppDevelopment" role="button">View our Github repo</a></p>
         </div>
       </div>
 
       <hr>
-
-      <footer>
-        <img src="/bootstrap/img/co2012.png"/>  
-        <p>Busy Bee Information Technologies &copy; 2016</p>
-        
-      </footer>
+      <div class="row" id="co-tagline">
+        <p class="text-center">   
+        <img src="/bootstrap/img/co2012.png"/><br> 
+        Copyright 2017 Busy Bee Information Technologies    
+        </p>
+         
+      </div>    
+      
            
         
     </div> <!-- /container -->   
-        <div class="container" >
-            <div class="row">
-                <div class="col-md-3">Web App Development</div>
-                <div class="col-md-3">Web Site Creation</div>
-                <div class="col-md-3">IoT Engineering*</div>
-                <div class="col-md-3">Emergency Mac/PC Repair</div>
-            </div>
-        
-        
-        </div> 
+    <footer>
+                <ul id="footNav" class="nav navbar-fixed-bottom nav-tabs text-center hidden-xs nav-justified">
+                    <li role="presentation">
+                        <a class="" id="webApps">Web App Development</a>
+                    </li>
+                    <li role="presentation">
+                        <a class=""id="design">Web Site Design</a>
+                    </li>
+                    <li role="presentation" id="IoT">
+                        <a class="">IoT Engineering</a>
+                    </li>
+                    <li role="presentation" id="MacPC">
+                        <a class="">Emergency Mac/PC Repair</a>
+                    </li>
+                        
+                        
+                        
+                        
+                    
+                    
+                    
+                    
+                </ul>  
+                
+      </footer>     
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
