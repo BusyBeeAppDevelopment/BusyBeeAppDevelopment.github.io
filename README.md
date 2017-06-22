@@ -12,4 +12,4 @@ You could then connect an inexpensive touch screen to create an E-kiosk.  Email 
 
 As we spiff up the company page there will be more to see here.  
 
--Shoe
+- Schuyler
