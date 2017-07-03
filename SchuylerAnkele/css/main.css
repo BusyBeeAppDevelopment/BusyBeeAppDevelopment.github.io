@@ -16,6 +16,11 @@
     margin-bottom:0px !important;
     
 }
+
+.lead{
+    font-size: 1.5em !important;
+}
+
 #home{
     padding-top: 20px;
     background-color: black;
