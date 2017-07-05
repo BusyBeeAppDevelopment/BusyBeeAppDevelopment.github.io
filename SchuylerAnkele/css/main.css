@@ -6,10 +6,9 @@
 
 
 
-#languages{
-    background-color: black;
-    color: aliceblue;
+#home{
     padding-top: 20px;
+    background-color: black;
 }
 
 .jumbotron{
@@ -17,13 +16,20 @@
     
 }
 
+
+#languages{
+    background-color: black;
+    color: aliceblue;
+    padding-top: 20px;
+}
 .lead{
     font-size: 1.5em !important;
 }
 
-#home{
-    padding-top: 20px;
-    background-color: black;
+#myName::after{
+    content: ' - Full-Stack Application Developer';
+    color: white;
+    font-size: .9rem;
 }
 
 
