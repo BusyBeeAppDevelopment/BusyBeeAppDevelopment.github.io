@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CC Sand & Stone Materials Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+        .nav-link.active{
+            background-color: #d6e5ff !important;
+        }
+        .nav-link{
+            font-size: 1.3rem !important;
+        }
+        .col-form-label{
+            font-size: 1.2rem;
+        }
+        .btn-primary{
+            text-shadow: 2px 2px black;
+            box-shadow: 7px 7px 3px #888888;
+        }
+    </style>
+</head>
+<body>
+    <h2>Materials Calculator</h2>
+    <!-- Navigation for the calculator -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a data-toggle="tab" class="nav-link active" href="#stoneWall" aria-controls="home" aria-selected="true">Stone Walls</a>
+        </li>
+        <li class="nav-item">
+            <a data-toggle="tab" class="nav-link" href="#flagstone" aria-controls="home" aria-selected="false">Flagstone
+                For Patio</a>
+        </li>
+        <li class="nav-item">
+            <a data-toggle="tab" class="nav-link" href="#roadbase" aria-controls="home" aria-selected="false">Road Base Fill</a>
+        </li>
+        <li class="nav-item">
+            <a data-toggle="tab" class="nav-link" href="#barkMulch" aria-controls="home" aria-selected="false">Bark Mulch</a>
+        </li>
+        <li class="nav-item">
+            <a data-toggle="tab" class="nav-link" href="#stoneMulch" aria-controls="home" aria-selected="false">Decorative Rock</a>
+        </li>
+        <li class="nav-item">
+            <a data-toggle="tab" class="nav-link" href="#topsoilTab" aria-controls="home" aria-selected="false">Topsoil</a>
+        </li>
+    </ul>
+    <!-- Wrapper for tabbed content -->
+    <div class="tab-content" id="myTabContent">
+
+
+        <!------------------ Tab Pane for Stone Wall calculator --------------------->
+        <!-- We'll need to refactor this a little.
+             The user would like some preset values for the Stone Wall chunks
+        -->
+        <div class="container tab-pane fade show active text-center" id="stoneWall" role="tabpanel" aria-labelledby="stoneWall-tab">
+            <!-- Start of form wrapper -->
+            <h3>Stone Wall Supply</h3>
+            <div class=""><!-- row justify-content-center -->
+                <!-- The name of the Form -->
+                <form id="WallMaterial" action="" onsubmit="return false">
+                    <div class="form-group-row">
+                    </div>
+                    <!-- Length Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="length" class="col-sm-2 col-form-label">Length:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="wallLengthUnits" id="wallLengthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="wallLengthUnits" id="wallLengthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <!-- Start of input -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="length" placeholder="Length in Feet" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End of Length Elements -->
+
+                    <!-- Wall Height Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="wallHeight" class="col-sm-2 col-form-label">Height:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="wallHeightUnits" id="wallHeightUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="wallHeightUnits" id="wallHeightUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="wallHeight" placeholder="Height in Feet" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End of Wall Height Elements -->
+
+                    <!-- Thickness or Depth Elements: Label, Radio and Input -->
+                    <div class="form-group-row" hidden>
+                        <label for="wallThickness" class="col-sm-2 col-form-label">Thickness:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="wallThicknessUnits" id="wallThicknessUnitFt" value="12"> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="wallThicknessUnits" id="wallThicknessUnitIn" value="1" checked> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="wallThickness" value="1" required>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- End of Thickness or Depth Element -->
+
+                    <div class="form-group-row">
+
+                    </div>
+                    <!-- Calculate button (Will kick off functions to perform calcs) -->
+                    <div class="form-group-row">
+                        <div class="col-auto">
+                            <br>
+                            <button class="btn btn-primary" onclick="boulderWallVol('WallMaterial')">
+                                Calculate
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End of Calc Button -->
+                    <!-- Results field -->
+                    <div class="calculationResult">
+                        <h3 id="WallMaterialResult"></h3>
+                    </div>     
+                    <!--End of Results -->
+                </form>
+            </div>
+            <!-- End of form wrapper -->
+        </div>
+        <!-- End of Stonewall Calculator Tab Pane -->
+
+        <!------------------------------ Flagstone tab ------------------------------------------>
+        <!-- We'll need to refactor this a little.
+             The user would like some preset values for Flagstone thickness
+        -->
+
+        <div class="container tab-pane fade text-center" id="flagstone" role="tabpanel" aria-labelledby="stoneWall-tab">
+            <!-- Start of form wrapper -->
+            <h3>Flagstone Patio</h3>
+            <div class=""><!-- row justify-content-center -->
+                <!-- The name of the Form -->
+                <form id="FlagstoneMaterial" action="" onsubmit="return false">
+                    <div class="form-group-row">
+                    </div>
+                    <!-- Length Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="length" class="col-sm-2 col-form-label">Length:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioLengthUnits" id="PatioLengthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioLengthUnits" id="PatioLengthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <!-- Start of input -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="PatioLength" placeholder="Length in Feet" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End of Length Elements -->
+
+                    <!-- Width Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="PatioWidth" class="col-sm-2 col-form-label">Width:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioWidthUnits" id="PatioWidthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioWidthUnits" id="PatioWidthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="PatioWidth" placeholder="Height in Feet" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End of Width Elements -->
+
+                    <!-- Thickness or Depth Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="FlagstoneThickness" class="col-sm-6 col-form-label">Flagstone Thickness (in Inches):</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline" hidden>
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="FlagstoneThicknessUnits" id="FlagstoneThicknessUnitFt" value="12"> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline" hidden>
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="FlagstoneThicknessUnits" id="FlagstoneThicknessUnitIn" value="1" checked> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <select name="thickness" form="FlagstoneMaterial" id="FlagstoneThickness">
+                                    <option value=1> 1" </option>
+                                    <option value=1.5> 1.5" </option>
+                                    <option value=2> 2" </option>
+                                    <option value=2.5> 2.5" </option>
+                                </select>
+                                <!-- <input type="number" class="form-control" id="FlagstoneThickness" placeholder="Thickness in Inches" required> -->
+                            </div>
+                        </div>
+
+                        <br>
+                    </div>
+                    <!-- End of Thickness or Depth Element -->
+
+                    <div class="form-group-row">
+
+                    </div>
+                    <!-- Calculate button (Will kick off functions to perform calcs) -->
+                    <div class="form-group-row">
+                        <div class="col-auto">
+                            <button class="btn btn-primary" onclick="flagstonePatioVol('FlagstoneMaterial')">
+                                Calculate
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End of Calc Button -->
+                    <!-- Results field -->
+                    <div class="calculationResult">
+                        <h3 id="FlagstoneMaterialResult"></h3>
+                    </div>
+                    <!--End of Results -->
+                </form>
+            </div>
+            <!-- End of form wrapper -->
+
+        </div><!-- End of Flagstone Patio Calculator Div -->
+
+        <!------------------------------ Roadbase tab ------------------------------------------>
+
+        <div class="container tab-pane fade text-center" id="roadbase" role="tabpanel" aria-labelledby="roadbase-tab">
+            <!-- Start of form wrapper -->
+            <h3>Roadbase Fill</h3>
+            <div class=""><!-- row justify-content-center -->
+                <!-- The name of the Form -->
+                <form id="RoadbaseMaterial" action="" onsubmit="return false">
+                    <div class="form-group-row">
+                    </div>
+                    <!-- Length Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="RoadbaseLength" class="col-sm-2 col-form-label">Length:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseLengthUnits" id="RoadbaseLengthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseLengthUnits" id="RoadbaseLengthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <!-- Start of input -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="RoadbaseLength" placeholder="Length in Feet" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Length Elements -->
+
+                    <!-- Width Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="RoadbaseWidth" class="col-sm-2 col-form-label">Width:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseWidthUnits" id="RoadbaseWidthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseWidthUnits" id="RoadbaseWidthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="RoadbaseWidth" placeholder="Height in Feet" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Width Elements -->
+
+                    <!-- Thickness or Depth Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="RoadbaseThickness" class="col-sm-2 col-form-label">Roadbase Fill Depth:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseThicknessUnits" id="RoadbaseThicknessUnitFt" value="12"> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseThicknessUnits" id="RoadbaseThicknessUnitIn" value="1" checked> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="RoadbaseThickness" placeholder="Roadbase Depth in Inches" required>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- End of Thickness or Depth Element -->
+
+                    <div class="form-group-row">
+
+                    </div>
+                    <!-- Calculate button (Will kick off functions to perform calcs) -->
+                    <div class="form-group-row">
+                        <div class="col-auto">
+                            <button class="btn btn-primary" onclick="roadbaseFillVol('RoadbaseMaterial')">
+                                Calculate
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End of Calc Button -->
+                    <!-- Results field -->
+                    <div class="calculationResult">
+                        <h3 id="RoadbaseMaterialResult"></h3>
+                    </div>
+                    <!--End of Results -->
+                </form>
+            </div>
+            <!-- End of form wrapper -->
+
+        </div><!-- End of Roadbase Calculator Div -->
+
+        <!------------------------------ Bark Mulch tab ------------------------------------------>
+        <!--
+
+        -->
+        <div class="container tab-pane fade text-center" id="barkMulch" role="tabpanel" aria-labelledby="stoneWall-tab">
+            <!-- Start of form wrapper -->
+            <h3>Bark Mulch Bed</h3>
+            <div class=""><!-- row justify-content-center -->
+                <!-- The name of the Form -->
+                <form id="BarkMulchMaterial" action="" onsubmit="return false">
+                    <div class="form-group-row">
+                    </div>
+                    <!-- Length Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="BarkMulchLength" class="col-sm-2 col-form-label">Length:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioLengthUnits" id="BarkMulchLengthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioLengthUnits" id="BarkMulchLengthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <!-- Start of input -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="BarkMulchLength" placeholder="Length in Feet" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Length Elements -->
+
+                    <!-- Width Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="PatioWidth" class="col-sm-2 col-form-label">Width:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioWidthUnits" id="BarkMulchWidthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioWidthUnits" id="BarkMulchWidthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="BarkMulchWidth" placeholder="Height in Feet" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Width Elements -->
+
+                    <!-- Thickness or Depth Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="BarkMulchDepth" class="col-sm-2 col-form-label">Depth of Mulch:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseThicknessUnits" id="BarkMulchDepthUnitFt" value="12"> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseThicknessUnits" id="BarkMulchDepthUnitIn" value="1" checked> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="BarkMulchDepth" placeholder="Thickness in Inches" required>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- End of Thickness or Depth Element -->
+
+                    <div class="form-group-row">
+
+                    </div>
+                    <!-- Calculate button (Will kick off functions to perform calcs) -->
+                    <div class="form-group-row">
+                        <div class="col-auto">
+                            <button class="btn btn-primary" onclick="barkMulchVol('BarkMulchMaterial')">
+                                Calculate
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End of Calc Button -->
+                    <!-- Results field -->
+                    <div class="calculationResult">
+                        <h3 id="BarkMulchMaterialResult"></h3>
+                    </div>
+                    <!--End of Results -->
+                </form>
+            </div>
+            <!-- End of form wrapper -->
+
+        </div><!-- End of Bark Mulch Calculator Div -->
+
+        <!------------------------------ Stone Mulch tab ------------------------------------------>
+
+        <div class="container tab-pane fade text-center" id="stoneMulch" role="tabpanel" aria-labelledby="stoneWall-tab">
+            <!-- Start of form wrapper -->
+            <h3>Decorative Rock</h3>
+            <div class=""><!-- row justify-content-center -->
+                <!-- The name of the Form -->
+                <form id="StoneMulchMaterial" action="" onsubmit="return false">
+                    <div class="form-group-row">
+                    </div>
+                    <!-- Length Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="StoneMulchLength" class="col-sm-2 col-form-label">Length:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioLengthUnits" id="StoneMulchLengthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioLengthUnits" id="StoneMulchLengthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+
+                        <!-- Start of input -->
+                        <div class="row justify-content-md-center">
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="StoneMulchLength" placeholder="Length in Feet" required>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- End of Length Elements -->
+
+                    <!-- Width Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="PatioWidth" class="col-sm-2 col-form-label">Width:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioWidthUnits" id="StoneMulchWidthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioWidthUnits" id="StoneMulchWidthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="StoneMulchWidth" placeholder="Height in Feet" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Width Elements -->
+
+                    <!-- Thickness or Depth Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="StoneMulchDepth" class="col-sm-2 col-form-label">Depth of Mulch:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseThicknessUnits" id="StoneMulchDepthUnitFt" value="12"> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="RoadbaseThicknessUnits" id="StoneMulchDepthUnitIn" value="1" checked> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="StoneMulchDepth" placeholder="Thickness in Inches" required>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- End of Thickness or Depth Element -->
+
+                    <div class="form-group-row">
+
+                    </div>
+                    <!-- Calculate button (Will kick off functions to perform calcs) -->
+                    <div class="form-group-row">
+                        <div class="col-auto">
+                            <button class="btn btn-primary" onclick="stoneMulchVol('StoneMulchMaterial')">
+                                Calculate
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End of Calc Button -->
+                    <!-- Results field -->
+                    <div class="calculationResult">
+                        <h3 id="StoneMulchMaterialResult"></h3>
+                    </div>
+                    <!--End of Results -->
+                </form>
+            </div>
+            <!-- End of form wrapper -->
+
+        </div><!-- End of Stone Mulch Calculator Div -->
+
+        <!------------------------------ Topsoil tab ------------------------------------------>
+
+        <div class="container tab-pane fade text-center" id="topsoilTab" role="tabpanel" aria-labelledby="stoneWall-tab">
+            <!-- Start of form wrapper -->
+            <h3>Topsoil Fill</h3>
+            <div class=""><!-- row justify-content-center -->
+                <!-- The name of the Form -->
+                <form id="TopsoilMaterial" action="" onsubmit="return false">
+                    <div class="form-group-row">
+                    </div>
+                    <!-- Length Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="TopsoilLength" class="col-sm-2 col-form-label">Length:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioLengthUnits" id="TopsoilLengthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="PatioLengthUnits" id="TopsoilLengthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <!-- Start of input -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="TopsoilLength" placeholder="Length in Feet" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Length Elements -->
+
+                    <!-- Width Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="TopsoilWidth" class="col-sm-2 col-form-label">Width:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="TopsoilWidthUnits" id="TopsoilWidthUnitFt" value="12" checked> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="TopsoilWidthUnits" id="TopsoilWidthUnitIn" value="1"> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="TopsoilWidth" placeholder="Height in Feet" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Width Elements -->
+
+                    <!-- Thickness or Depth Elements: Label, Radio and Input -->
+                    <div class="form-group-row">
+                        <label for="TopsoilDepth" class="col-sm-2 col-form-label">Depth of Mulch:</label>
+                        <!-- Radioboxes feet and inches selectors -->
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="TopsoilDepthUnits" id="TopsoilDepthUnitFt" value="12"> Feet
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="TopsoilDepthUnits" id="TopsoilDepthUnitIn" value="1" checked> Inches
+                            </label>
+                        </div>
+                        <!-- End of radioboxes -->
+                        <div class="row justify-content-md-center">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="TopsoilDepth" placeholder="Thickness in Inches" required>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- End of Thickness or Depth Element -->
+
+                    <div class="form-group-row">
+
+                    </div>
+                    <!-- Calculate button (Will kick off functions to perform calcs) -->
+                    <div class="form-group-row">
+                        <div class="col-auto">
+                            <button class="btn btn-primary" onclick="topsoilFillVol('TopsoilMaterial')">
+                                Calculate
+                            </button>
+                        </div>
+                    </div>
+                    <!-- End of Calc Button -->
+                    <!-- Results field -->
+                    <div class="calculationResult">
+                        <h3 id="TopsoilMaterialResult"></h3>
+                    </div>
+                    <!--End of Results -->
+                </form>
+            </div>
+            <!-- End of form wrapper -->
+
+        </div><!-- End of Topsoil Calculator Div -->
+
+    </div>
+    <!-- End of wrapper for Tabbed content -->
+
+
+
+</body>
+
+<footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="functions.js">formDump('#WallMaterials');</script>
+</footer>
+</html>
