@@ -23,7 +23,7 @@
 <body>
     <h2>Materials Calculator</h2>
     <!-- Navigation for the calculator -->
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist" >
         <li class="nav-item">
             <a data-toggle="tab" class="nav-link active" href="#stoneWall" aria-controls="home" aria-selected="true">Stone Walls</a>
         </li>
@@ -62,7 +62,7 @@
                     </div>
                     <!-- Length Elements: Label, Radio and Input -->
                     <div class="form-group-row">
-                        <label for="length" class="col-sm-2 col-form-label">Length:</label>
+                        <label for="WallLength" class="col-sm-2 col-form-label">Length:</label>
                         <!-- Radioboxes feet and inches selectors -->
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
@@ -78,7 +78,7 @@
                         <!-- Start of input -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="length" placeholder="Length in Feet" required>
+                                <input type="number" class="form-control" id="WallLength" placeholder="Length in Ft or In" required>
                             </div>
                         </div>
 
@@ -102,7 +102,7 @@
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="wallHeight" placeholder="Height in Feet" required>
+                                <input type="number" class="form-control" id="wallHeight" placeholder="Height in Ft or In" required>
                             </div>
                         </div>
 
@@ -170,7 +170,7 @@
                     </div>
                     <!-- Length Elements: Label, Radio and Input -->
                     <div class="form-group-row">
-                        <label for="length" class="col-sm-2 col-form-label">Length:</label>
+                        <label for="PatioLength" class="col-sm-2 col-form-label">Length:</label>
                         <!-- Radioboxes feet and inches selectors -->
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
@@ -186,7 +186,7 @@
                         <!-- Start of input -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="PatioLength" placeholder="Length in Feet" required>
+                                <input type="number" class="form-control" id="PatioLength" placeholder="Length in Ft or In" required>
                             </div>
                         </div>
 
@@ -210,7 +210,7 @@
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="PatioWidth" placeholder="Height in Feet" required>
+                                <input type="number" class="form-control" id="PatioWidth" placeholder="Width in Ft or In" required>
                             </div>
                         </div>
 
@@ -316,13 +316,13 @@
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="RoadbaseWidthUnits" id="RoadbaseWidthUnitIn" value="1"> Inches
+                                <input class="form-check-input" type="radio" name="RoadbaseWidthUnits" id="RoadbaseWidthUnitIn" value="36"> Yards
                             </label>
                         </div>
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="RoadbaseWidth" placeholder="Height in Feet" required>
+                                <input type="number" class="form-control" id="RoadbaseWidth" placeholder="Width in Ft or Yards" required>
                             </div>
                         </div>
                     </div>
@@ -405,7 +405,7 @@
                         <!-- Start of input -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="BarkMulchLength" placeholder="Length in Feet" required>
+                                <input type="number" class="form-control" id="BarkMulchLength" placeholder="Length in Ft or In" required>
                             </div>
                         </div>
                     </div>
@@ -428,7 +428,7 @@
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="BarkMulchWidth" placeholder="Height in Feet" required>
+                                <input type="number" class="form-control" id="BarkMulchWidth" placeholder="Height in Ft or In" required>
                             </div>
                         </div>
                     </div>
@@ -451,7 +451,7 @@
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="BarkMulchDepth" placeholder="Thickness in Inches" required>
+                                <input type="number" class="form-control" id="BarkMulchDepth" placeholder="Depth in In or Ft" required>
                             </div>
                         </div>
                         <br>
@@ -510,7 +510,7 @@
                         <!-- Start of input -->
                         <div class="row justify-content-md-center">
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="StoneMulchLength" placeholder="Length in Feet" required>
+                            <input type="number" class="form-control" id="StoneMulchLength" placeholder="Length in Ft or In" required>
                         </div>
                         </div>
                     </div>
@@ -533,7 +533,7 @@
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="StoneMulchWidth" placeholder="Height in Feet" required>
+                                <input type="number" class="form-control" id="StoneMulchWidth" placeholder="Width in Ft or In" required>
                             </div>
                         </div>
                     </div>
@@ -556,7 +556,7 @@
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="StoneMulchDepth" placeholder="Thickness in Inches" required>
+                                <input type="number" class="form-control" id="StoneMulchDepth" placeholder="Depth in In or Ft" required>
                             </div>
                         </div>
                         <br>
@@ -614,7 +614,7 @@
                         <!-- Start of input -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="TopsoilLength" placeholder="Length in Feet" required>
+                                <input type="number" class="form-control" id="TopsoilLength" placeholder="Length in Ft or In" required>
                             </div>
                         </div>
                     </div>
@@ -637,7 +637,7 @@
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="TopsoilWidth" placeholder="Height in Feet" required>
+                                <input type="number" class="form-control" id="TopsoilWidth" placeholder="Width in Ft or In" required>
                             </div>
                         </div>
                     </div>
@@ -660,7 +660,7 @@
                         <!-- End of radioboxes -->
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="TopsoilDepth" placeholder="Thickness in Inches" required>
+                                <input type="number" class="form-control" id="TopsoilDepth" placeholder="Depth in In or Ft" required>
                             </div>
                         </div>
                         <br>

@@ -277,7 +277,7 @@ function topsoilFillVol(formID){
     const cuInches = length * height * thickness;
     const cuFeet = (length/12) * (height/12) * (thickness/12);
     const cuYards =  (cuFeet * (1/27)).toFixed(1);
-    $('#'+formID+'Result').html('<br><b>Cu Yards</b>' + cuYards);
+    $('#'+formID+'Result').html('<br><b>Cu Yards: </b>' + cuYards);
 }
 
 const printVals = function(divID){
