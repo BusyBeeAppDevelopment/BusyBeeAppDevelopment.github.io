@@ -211,9 +211,8 @@ function roadbaseFillVol(formID){
     const lbsOfFill = cuYards * 2565.415;
     const lbsOfFillMax = lbsOfFill * 1.4;
     const tonsOfFill = (lbsOfFill/2000).toFixed(1);
-    const tonsOfFillMax = (tonsOfFill * 1.4).toFixed(1);
-    $('#'+formID+'Result').html('<br><b>Cu Yards: </b>' + cuYards.toFixed(1)
-        +' <br><b>Tons Of Fill: </b>' + tonsOfFill + ' - ' + tonsOfFillMax);
+    const tonsOfFillMax = (tonsOfFill * 1.06).toFixed(1);
+    $('#'+formID+'Result').html('<br><b>Tons Of Fill: </b>' + tonsOfFill + ' - ' + tonsOfFillMax);
 }
 
 
@@ -255,9 +254,7 @@ function stoneMulchVol(formID){
     const cuFeet = (length/12) * (height/12) * (thickness/12);
     const tonnage = (sqFeet/45).toFixed(1);
     const cuYards = cuFeet * (1/27);
-    $('#'+formID+'Result').html('<br><b>Sq Feet: </b>' + sqFeet
-        +' <br><b>Sq Yards: </b>' + sqYards
-        +' <br><b>Estimated Tons: </b>' + tonnage +' - ' + (tonnage* 1.4).toFixed(1));
+    $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonnage +' - ' + (tonnage* 1.4).toFixed(1));
 }
 
 
