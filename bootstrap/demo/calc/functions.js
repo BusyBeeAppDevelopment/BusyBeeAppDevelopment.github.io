@@ -212,7 +212,13 @@ function roadbaseFillVol(formID){
     const lbsOfFillMax = lbsOfFill * 1.4;
     const tonsOfFill = (lbsOfFill/2000).toFixed(1);
     const tonsOfFillMax = (tonsOfFill * 1.06).toFixed(1);
-    $('#'+formID+'Result').html('<br><b>Tons Of Fill: </b>' + tonsOfFill + ' - ' + tonsOfFillMax);
+    if(tonsOfFill === tonsOfFillMax){
+        $('#'+formID+'Result').html('<br><b>Tons Of Fill: </b>' + tonsOfFill);
+    }
+    else{
+        $('#'+formID+'Result').html('<br><b>Tons Of Fill: </b>' + tonsOfFill + ' - ' + tonsOfFillMax);
+    }
+
 }
 
 
