@@ -178,11 +178,11 @@ function flagstonePatioVol(formID){
     // const cuYards = cuFeet * (1/27);
     if(flagstoneRange[0]===flagstoneRange[1]){
         $('#'+formID+'Result').html('<br><b>Sq Feet: </b>' + sqFeet.toFixed(1)
-            +' <br><b>Range: </b>' + flagstoneRange[0] + " Tons");
+            +' <br><b>Range: </b>' + flagstoneRange[0] + " Estimated Tonnage");
     }
     else{
         $('#'+formID+'Result').html('<br><b>Sq Feet: </b>' + sqFeet.toFixed(1)
-            +' <br><b>Range: </b>' + flagstoneRange[0] + " - " + flagstoneRange[1] + " Tons");
+            +' <br><b>Range: </b>' + flagstoneRange[0] + " - " + flagstoneRange[1] + " Estimated Tonnage");
     }
 
 }
@@ -212,16 +212,24 @@ function roadbaseFillVol(formID){
     const lbsOfFillMax = lbsOfFill * 1.4;
     const tonsOfFill = (lbsOfFill/2000).toFixed(1);
     const tonsOfFillMax = (tonsOfFill * 1.06).toFixed(1);
+    // Need to account for compaction
     if(tonsOfFill === tonsOfFillMax){
-        $('#'+formID+'Result').html('<br><b>Tons Of Fill: </b>' + tonsOfFill);
+        $('#'+formID+'Result').html('<br><b>Estimated Tons Needed: </b>' + tonsOfFill);
     }
     else{
-        $('#'+formID+'Result').html('<br><b>Tons Of Fill: </b>' + tonsOfFill + ' - ' + tonsOfFillMax);
+        $('#'+formID+'Result').html('<br><b>Estimated Tons Needed: </b>' + tonsOfFill + ' - ' + tonsOfFillMax);
     }
 
 }
-
-
+/*
+Bark Mulch values
+CUBIC YARD COVERAGES
+75 sqft.@ 4” depth Examples 300/75=4  600/75=8
+100 sqft. @ 3" depth = 600/100=6
+150 sqft. @ 2" depth = 600/150=4
+200 sqft. @ 1 1/2" depth
+300 sqft. @ 1" depth = .9
+*/
 function barkMulchVol(formID){
     const capturedForm = getFormVals(formID);
     const length = capturedForm.Length * capturedForm.LengthMultiplier;
@@ -237,9 +245,18 @@ function barkMulchVol(formID){
     */
     const cuInches = length * height * thickness;
     const cuFeet = (length/12) * (height/12) * (thickness/12);
-    const cuYards = (cuFeet * (1/27)).toFixed(1);
+    const cuYards = ((cuFeet * (1/27)) * 1.1).toFixed(1);
     $('#'+formID+'Result').html('<br><b>Cu Yards: </b>' + cuYards);
 }
+/* Stone Mulch - As per Brandon December 1st
+*  Calculation for sq ft 10ft X 6ft
+*  240 sqft. @ 1" depth 600sqFeet = 2.5 tons
+*  120 sqft. @2" depth 600sqFeet = 5 tons
+*  80 sqft. @ 3" depth 600sqFeet = 7.5 tons
+*  60 sqft. @ 4" depth 600sqFeet = 10 tons
+*  50 sqft. @ 5" depth 600sqFeet = 12 tons
+*  40 sqft. @ 6" depth 600sqFeet = 15  tons
+* */
 function stoneMulchVol(formID){
     const capturedForm = getFormVals(formID);
     const length = capturedForm.Length * capturedForm.LengthMultiplier;
@@ -258,9 +275,9 @@ function stoneMulchVol(formID){
     const sqFeet = ((length/12) * (height/12)).toFixed(1);
     const sqYards = (sqFeet/0.1111).toFixed(1);
     const cuFeet = (length/12) * (height/12) * (thickness/12);
-    const tonnage = (sqFeet/45).toFixed(1);
+    const tonnage = (sqFeet/40).toFixed(1);
     const cuYards = cuFeet * (1/27);
-    $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonnage +' - ' + (tonnage* 1.4).toFixed(1));
+    $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonnage +' - ' + (tonnage* 1.15).toFixed(1));
 }
 
 

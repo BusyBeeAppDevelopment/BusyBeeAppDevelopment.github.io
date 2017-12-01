@@ -18,10 +18,16 @@
             text-shadow: 2px 2px black;
             box-shadow: 7px 7px 3px #888888;
         }
+        .disclaimer{
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
-    <h2>Materials Calculator</h2>
+    <!-- <h2>Materials Calculator</h2> -->
+    <div class="text-center">
+        <h4><i>Please visit our price list page for a complete list of materials and coverages.</i></h4>
+    </div>
     <!-- Navigation for the calculator -->
     <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist" >
         <li class="nav-item">
@@ -54,7 +60,8 @@
         -->
         <div class="container tab-pane fade show active text-center" id="stoneWall" role="tabpanel" aria-labelledby="stoneWall-tab">
             <!-- Start of form wrapper -->
-            <h3>Stone Wall Supply</h3>
+            <h2>Stone Wall Supply</h2>
+            <h3>* Quantities vary depending on size and style of material used.</h3>
             <div class=""><!-- row justify-content-center -->
                 <!-- The name of the Form -->
                 <form id="WallMaterial" action="" onsubmit="return false">
@@ -162,7 +169,7 @@
 
         <div class="container tab-pane fade text-center" id="flagstone" role="tabpanel" aria-labelledby="stoneWall-tab">
             <!-- Start of form wrapper -->
-            <h3>Flagstone Patio</h3>
+            <h3>Flagstone Patio/Walkway</h3>
             <div class=""><!-- row justify-content-center -->
                 <!-- The name of the Form -->
                 <form id="FlagstoneMaterial" action="" onsubmit="return false">
@@ -257,11 +264,13 @@
                             <button class="btn btn-primary" onclick="flagstonePatioVol('FlagstoneMaterial')">
                                 Calculate
                             </button>
+                            <br>
                         </div>
                     </div>
                     <!-- End of Calc Button -->
                     <!-- Results field -->
                     <div class="calculationResult">
+                        <h4 class="disclaimer">* Weight will vary depending on joint width and waste from cutting/shaping flagstone</h4>
                         <h3 id="FlagstoneMaterialResult"></h3>
                     </div>
                     <!--End of Results -->
@@ -366,6 +375,7 @@
                     <!-- End of Calc Button -->
                     <!-- Results field -->
                     <div class="calculationResult">
+                        <h4 class="disclaimer">Does not include loss for compaction.</h4>
                         <h3 id="RoadbaseMaterialResult"></h3>
                     </div>
                     <!--End of Results -->
@@ -578,6 +588,7 @@
                     <!-- End of Calc Button -->
                     <!-- Results field -->
                     <div class="calculationResult">
+                        <h4 class="disclaimer">*Decorative Rock calculations are based off using ¾” or 1.5” rock.</h4>
                         <h3 id="StoneMulchMaterialResult"></h3>
                     </div>
                     <!--End of Results -->
