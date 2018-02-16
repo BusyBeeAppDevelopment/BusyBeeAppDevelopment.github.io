@@ -72,9 +72,7 @@
 
 
         <!------------------ Tab Pane for Stone Wall calculator --------------------->
-        <!-- We'll need to refactor this a little.
-             The user would like some preset values for the Stone Wall chunks
-        -->
+
         <div class="container tab-pane fade show active text-center" id="stoneWall" role="tabpanel" aria-labelledby="stoneWall-tab">
             <!-- Start of form wrapper -->
             <h2>Stone Wall Supply</h2>
@@ -399,13 +397,9 @@
                 </form>
             </div>
             <!-- End of form wrapper -->
-
         </div><!-- End of Roadbase Calculator Div -->
 
         <!------------------------------ Bark Mulch tab ------------------------------------------>
-        <!--
-
-        -->
         <div class="container tab-pane fade text-center" id="barkMulch" role="tabpanel" aria-labelledby="stoneWall-tab">
             <!-- Start of form wrapper -->
             <h3>Bark Mulch Bed</h3>
@@ -489,7 +483,8 @@
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
                                 <select name="MulchMedium" form="BarkMulchMaterial" id="MulchSelector">
-                                    <option value=-1> Select a Soil Type (optional) </option>
+                                    <option value=-1> Select a Mulch Type (optional) </option>
+                                    <option value=480> Cascade </option>
                                     <option value=480> Cedar </option>
                                     <option value=460> Coffee Metro </option>
                                     <option value=420> Red,Gold,Brown Metro </option>
@@ -524,7 +519,6 @@
         </div><!-- End of Bark Mulch Calculator Div -->
 
         <!------------------------------ Stone Mulch tab ------------------------------------------>
-
         <div class="container tab-pane fade text-center" id="stoneMulch" role="tabpanel" aria-labelledby="stoneWall-tab">
             <!-- Start of form wrapper -->
             <h3>Decorative Rock</h3>
@@ -726,7 +720,6 @@
                                     <option value=750> Aged / Aspen Humus </option>
                                     <option value=1300> Cow Manure </option>
                                     <option value=1300> Compost (Biocomp) </option>
-                                    <option value=480> Cascade </option>
                                 </select>
                                 <!-- <input type="number" class="form-control" id="FlagstoneThickness" placeholder="Thickness in Inches" required> -->
                                 <br>
