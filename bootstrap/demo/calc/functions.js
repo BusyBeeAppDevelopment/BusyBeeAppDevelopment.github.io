@@ -1,7 +1,7 @@
 /*
 *  Materials Calculator for CC Sand and Stone
 *  By Schuyler Ankele - Busy Bee Web Applications
-*  11/06/2107
+*  11/06/2017
 *  Schuyler.ankele@gmail.com
 *
 *  Dependencies - jQuery 3+ and Bootstrap 4
@@ -106,16 +106,20 @@ function boulderWallVol(formID){
     const cuFeet = (length/12) * (height/12) * (thickness/12);
     const cuYards = cuFeet * (1/27);
     const lbsOfStone = cuYards * 2700;
-    const tonsOfStoneMin = ((length/12) * (height/12)) /20; // lbsOfStone/2000;
+    const tonsOfStoneMin = ((length/12) * (height/12)) / 25; // lbsOfStone/2000;
     const tonsOfStoneMax = tonsOfStoneMin * 1.6;
     const tonsOfStone = [tonsOfStoneMin.toFixed(1), tonsOfStoneMax.toFixed(1)];
 
+    /* Deprecated Calc
     if(tonsOfStone[0] !== tonsOfStone[1]){
         $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonsOfStone[0] + " - " + tonsOfStone[1]);
     }
     else{
         $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonsOfStone[0] + " - " + tonsOfStone[1]);
     }
+    */
+    // Just take the high estimate
+    $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonsOfStone[1]);
     const amtOfStone = ((length * height * thickness)/27) * 1.25;
     console.log(amtOfStone);
     // return amtOfStone;
@@ -141,20 +145,12 @@ function flagstonePatioVol(formID){
     var  divisorMax;
 
     if (thickness === 1){
-        divisorMin = 100;
-        divisorMax = 100;
+        divisorMin = 120;
+        divisorMax = 120;
     }
-    else if(thickness === 1.5){
-        divisorMin = 80;
-        divisorMax = 100;
-    }
-    else if(thickness === 2){
-        divisorMin = 80;
-        divisorMax = 90;
-    }
-    else if(thickness === 1.5){
-        divisorMin = 60;
-        divisorMax = 80;
+    else if(thickness >= 2){
+        divisorMin = 70;
+        divisorMax = 70;
     }
     else {
         throw "You've entered an invalid number";
@@ -296,7 +292,7 @@ function stoneMulchVol(formID){
     const sqFeet = ((length/12) * (height/12)).toFixed(1);
     const sqYards = (sqFeet/0.1111).toFixed(1);
     const cuFeet = (length/12) * (height/12) * (thickness/12);
-    const tonnage = (cuFeet/20).toFixed(1);
+    const tonnage = (sqFeet/40).toFixed(1);
     const cuYards = cuFeet * (1/27);
     $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonnage +' - ' + (tonnage* 1.15).toFixed(1));
 }

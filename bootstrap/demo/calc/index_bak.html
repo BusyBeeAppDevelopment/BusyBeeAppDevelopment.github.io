@@ -72,12 +72,10 @@
 
 
         <!------------------ Tab Pane for Stone Wall calculator --------------------->
-        <!-- We'll need to refactor this a little.
-             The user would like some preset values for the Stone Wall chunks
-        -->
+
         <div class="container tab-pane fade show active text-center" id="stoneWall" role="tabpanel" aria-labelledby="stoneWall-tab">
             <!-- Start of form wrapper -->
-            <h2>Stone Walls</h2>
+            <h2>Stone Wall Supply</h2>
             <h3>* Quantities vary depending on size and style of material used.</h3>
             <div class=""><!-- row justify-content-center -->
                 <!-- The name of the Form -->
@@ -259,8 +257,10 @@
                         <div class="row justify-content-md-center">
                             <div class="col-sm-10">
                                 <select name="thickness" form="FlagstoneMaterial" id="FlagstoneThickness">
-                                    <option value=1> 1" - 2" </option>
-                                    <option value=2.5> 2"+ </option>
+                                    <option value=1> 1" </option>
+                                    <option value=1.5> 1.5" </option>
+                                    <option value=2> 2" </option>
+                                    <option value=2.5> 2.5" </option>
                                 </select>
                                 <!-- <input type="number" class="form-control" id="FlagstoneThickness" placeholder="Thickness in Inches" required> -->
                             </div>
@@ -397,13 +397,9 @@
                 </form>
             </div>
             <!-- End of form wrapper -->
-
         </div><!-- End of Roadbase Calculator Div -->
 
         <!------------------------------ Bark Mulch tab ------------------------------------------>
-        <!--
-
-        -->
         <div class="container tab-pane fade text-center" id="barkMulch" role="tabpanel" aria-labelledby="stoneWall-tab">
             <!-- Start of form wrapper -->
             <h3>Bark Mulch Bed</h3>
@@ -523,7 +519,6 @@
         </div><!-- End of Bark Mulch Calculator Div -->
 
         <!------------------------------ Stone Mulch tab ------------------------------------------>
-
         <div class="container tab-pane fade text-center" id="stoneMulch" role="tabpanel" aria-labelledby="stoneWall-tab">
             <!-- Start of form wrapper -->
             <h3>Decorative Rock</h3>
