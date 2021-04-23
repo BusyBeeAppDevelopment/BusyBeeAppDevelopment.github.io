@@ -299,10 +299,11 @@ function stoneMulchVol(formID){
     const cuInches = length * height * thickness;
     const sqFeet = ((length/12) * (height/12)).toFixed(1);
     const sqYards = (sqFeet/0.1111).toFixed(1);
-    const cuFeet = (length/12) * (height/12) * (thickness/12);
+    // const cuFeet = (length/12) * (height/12) * (thickness/12);
     
+    const cuFeet = sqFeet * (thickness/12);
     // const tonnage = (sqFeet/80).toFixed(1);
-    const tonnage = (cuFeet /21.6).toFixed(1)
+    const tonnage = (cuFeet / 27).toFixed(1);
     const cuYards = cuFeet * (1/27);
     $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonnage +' - ' + (tonnage* 1.15).toFixed(1));
 }
