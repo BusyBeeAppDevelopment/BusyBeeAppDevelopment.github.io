@@ -282,17 +282,27 @@ function stoneMulchVol(formID){
 
     /* ((𝒍𝒆𝒏𝒈𝒕𝒉 𝑿 𝒉𝒆𝒊𝒈𝒉𝒕 𝑿 𝒂𝒗𝒈 𝒔𝒊𝒛𝒆 𝒐𝒇 𝒓𝒐𝒄𝒌)÷27) X 1.25
     // From current Calculator: 10ft, 10ft, 4in = 2.3 tons
+    
     // ((120 in X 120 in X 4in)/27) X 1.25 = 2,666
+    1440 Sq Ft  * Depth In / 27 * 1.25
     const l = parseFloat(length);
     const h = parseFloat(height);
     const th = parseFloat(thickness);
+    1 Ton = 80 sq ft @ 3" deep
+    1 ton = (96in * 120in * 3in)/80 
+    Depth Multipliers
+    2" ==
+    3" == 80
+    4" ==
     */
 
     const cuInches = length * height * thickness;
     const sqFeet = ((length/12) * (height/12)).toFixed(1);
     const sqYards = (sqFeet/0.1111).toFixed(1);
     const cuFeet = (length/12) * (height/12) * (thickness/12);
-    const tonnage = (sqFeet/80).toFixed(1);
+    
+    // const tonnage = (sqFeet/80).toFixed(1);
+    const tonnage = (cuInches / 80);
     const cuYards = cuFeet * (1/27);
     $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + tonnage +' - ' + (tonnage* 1.15).toFixed(1));
 }
