@@ -305,7 +305,7 @@ function stoneMulchVol(formID){
     // const tonnage = (sqFeet/80).toFixed(1);
     const tonnage = (cuFeet / 21.6).toFixed(1);
     const cuYards = cuFeet * (1/27);
-    $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + (tonnage* 1.15).toFixed(1)) +' - ' + (tonnage* 1.25).toFixed(1));
+    $('#'+formID+'Result').html('<br><b>Estimated Tons: </b>' + (tonnage* 1.15).toFixed(1) +' - ' + (tonnage* 1.25).toFixed(1));
 }
 
 /*
